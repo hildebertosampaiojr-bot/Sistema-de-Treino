@@ -1,0 +1,112 @@
+{
+  "perfis": [
+    {
+      "id": 1,
+      "nome": "Junior",
+      "treinos": [
+        {
+          "id": 1,
+          "perfil_id": 1,
+          "nome": "Peito",
+          "descricao": "TREINO MASCULINO — HIPERTROFIA E FORÇA\nObjetivo: ganho de massa muscular, força e desenvolvimento muscular equilibrado.\n\nSupino reto com barra — 4 séries · 6–8 repetições · descanso: 120s\nSupino inclinado com halteres — 3 séries · 8–10 repetições · descanso: 90s\nSupino máquina — 3 séries · 10–12 repetições · descanso: 90s\nCrucifixo no crossover — 3 séries · 12–15 repetições · descanso: 60s\nPeck deck — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: controle a descida do peso por aproximadamente 2 segundos. Priorize amplitude confortável, técnica correta e progressão gradual de carga.",
+          "concluido": 0,
+          "dia_semana": 1
+        },
+        {
+          "id": 2,
+          "perfil_id": 1,
+          "nome": "Bíceps e tríceps",
+          "descricao": "Rosca direta com barra W — 3 séries · 8–10 repetições · descanso: 90s\nRosca alternada com halteres — 3 séries · 10–12 repetições · descanso: 60s\nRosca martelo — 3 séries · 10–12 repetições · descanso: 60s\nRosca Scott — 2 séries · 12–15 repetições · descanso: 60s\nTríceps testa com barra W — 3 séries · 8–10 repetições · descanso: 90s\nTríceps corda na polia — 3 séries · 10–12 repetições · descanso: 60s\nTríceps francês — 3 séries · 10–12 repetições · descanso: 60s\nTríceps unilateral na polia — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: mantenha os cotovelos estáveis, evite usar o balanço do tronco e controle tanto a subida quanto a descida.",
+          "concluido": 0,
+          "dia_semana": 2
+        },
+        {
+          "id": 3,
+          "perfil_id": 1,
+          "nome": "Costas",
+          "descricao": "Barra fixa ou puxada alta — 4 séries · 6–10 repetições · descanso: 120s\nRemada curvada com barra — 3 séries · 8–10 repetições · descanso: 120s\nRemada baixa — 3 séries · 10–12 repetições · descanso: 90s\nRemada unilateral com halter — 3 séries · 10–12 repetições · descanso: 90s\nPulldown com braços estendidos — 2 séries · 12–15 repetições · descanso: 60s\nCrucifixo inverso — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: evite impulsionar o peso com a lombar. Mantenha o tronco estável e priorize a movimentação controlada dos ombros e cotovelos.",
+          "concluido": 0,
+          "dia_semana": 3
+        },
+        {
+          "id": 4,
+          "perfil_id": 1,
+          "nome": "Quadríceps e ombros",
+          "descricao": "Agachamento livre — 4 séries · 6–8 repetições · descanso: 120s\nLeg press 45° — 3 séries · 10–12 repetições · descanso: 90s\nCadeira extensora — 3 séries · 12–15 repetições · descanso: 60s\nAgachamento búlgaro — 2 séries · 10–12 repetições por perna · descanso: 90s\nDesenvolvimento com halteres — 3 séries · 8–10 repetições · descanso: 90s\nElevação lateral — 3 séries · 12–15 repetições · descanso: 60s\nElevação lateral na polia — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: no agachamento, mantenha a coluna estável e utilize amplitude compatível com sua mobilidade. Nos ombros, evite balanços para levantar a carga.",
+          "concluido": 0,
+          "dia_semana": 4
+        },
+        {
+          "id": 5,
+          "perfil_id": 1,
+          "nome": "Posterior, glúteos e antebraços",
+          "descricao": "Stiff com barra — 3 séries · 8–10 repetições · descanso: 120s\nMesa flexora — 3 séries · 10–12 repetições · descanso: 90s\nCadeira flexora — 3 séries · 12–15 repetições · descanso: 60s\nElevação pélvica — 3 séries · 8–12 repetições · descanso: 90s\nCadeira abdutora — 2 séries · 15–20 repetições · descanso: 60s\nRosca de punho — 3 séries · 15–20 repetições · descanso: 60s\nRosca de punho inversa — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: no stiff, mantenha a coluna neutra e movimente o quadril para trás. Na elevação pélvica, evite hiperestender a lombar.",
+          "concluido": 0,
+          "dia_semana": 5
+        },
+        {
+          "id": 6,
+          "perfil_id": 1,
+          "nome": "Treino funcional",
+          "descricao": "Agachamento com peso corporal — 3 séries · 15 repetições\nFlexão de braços — 3 séries · 10–15 repetições\nPrancha abdominal — 3 séries · 30–45s\nPolichinelos — 3 séries · 30s\nMountain climber — 3 séries · 30s\nCaminhada ou bicicleta — 1 série · 15–20 min\n\nIntensidade: leve a moderada, evitando prejudicar a recuperação muscular.",
+          "concluido": 0,
+          "dia_semana": 6
+        },
+        {
+          "id": 7,
+          "perfil_id": 1,
+          "nome": "Cardio e recuperação ativa",
+          "descricao": "Caminhada ou bicicleta leve — 20–30 min\nMobilidade geral — 10 min\nAlongamentos leves — 5–10 min\n\nO domingo também pode ser utilizado para descanso completo, principalmente quando houver fadiga acumulada.",
+          "concluido": 0,
+          "dia_semana": 7
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Gabriella",
+      "treinos": [
+        {
+          "id": 8,
+          "perfil_id": 2,
+          "nome": "Posterior e glúteos",
+          "descricao": "TREINO FEMININO — HIPERTROFIA E GANHO DE MASSA\nPeso: 48 kg · Altura: 1,61 m\nObjetivo: ganho de massa muscular, priorizando glúteos, posteriores e quadríceps.\n\nMesa flexora — 3 séries · 10–12 repetições · descanso: 90s\nStiff com barra — 3 séries · 8–10 repetições · descanso: 120s\nElevação pélvica com barra — 3 séries · 8–12 repetições · descanso: 90s\nCadeira flexora — 2 séries · 12–15 repetições · descanso: 60s\nCadeira abdutora — 2 séries · 15–20 repetições · descanso: 60s\n\nOrientações: priorize execução controlada e progressão gradual. No stiff, mantenha a coluna neutra e evite compensações lombares.",
+          "concluido": 0,
+          "dia_semana": 1
+        },
+        {
+          "id": 9,
+          "perfil_id": 2,
+          "nome": "Bíceps e tríceps",
+          "descricao": "Rosca direta com barra W — 3 séries · 8–12 repetições · descanso: 90s\nRosca alternada — 3 séries · 10–12 repetições · descanso: 60s\nRosca martelo — 2 séries · 10–12 repetições · descanso: 60s\nTríceps corda na polia — 3 séries · 10–12 repetições · descanso: 60s\nTríceps francês — 3 séries · 10–12 repetições · descanso: 60s\nTríceps unilateral na polia — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: evite movimentos bruscos e mantenha os cotovelos estáveis durante as repetições.",
+          "concluido": 0,
+          "dia_semana": 2
+        },
+        {
+          "id": 10,
+          "perfil_id": 2,
+          "nome": "Quadríceps e glúteos",
+          "descricao": "Agachamento livre — 3 séries · 8–10 repetições · descanso: 120s\nLeg press 45° — 3 séries · 10–12 repetições · descanso: 90s\nCadeira extensora — 3 séries · 12–15 repetições · descanso: 60s\nAgachamento búlgaro — 2 séries · 10–12 repetições por perna · descanso: 90s\nGlúteo no cabo (coice) — 2 séries · 12–15 repetições por perna · descanso: 60s\n\nOrientações: mantenha a execução controlada, sem sacrificar a amplitude ou a postura para aumentar o peso.",
+          "concluido": 0,
+          "dia_semana": 3
+        },
+        {
+          "id": 11,
+          "perfil_id": 2,
+          "nome": "Costas e ombros",
+          "descricao": "Puxada alta na frente — 3 séries · 10–12 repetições · descanso: 90s\nRemada baixa — 3 séries · 10–12 repetições · descanso: 90s\nRemada unilateral — 2 séries · 10–12 repetições · descanso: 90s\nDesenvolvimento com halteres — 3 séries · 8–12 repetições · descanso: 90s\nElevação lateral — 3 séries · 12–15 repetições · descanso: 60s\nCrucifixo inverso — 2 séries · 12–15 repetições · descanso: 60s\n\nOrientações: evite utilizar impulso excessivo. Priorize controle e estabilidade dos ombros.",
+          "concluido": 0,
+          "dia_semana": 4
+        },
+        {
+          "id": 12,
+          "perfil_id": 2,
+          "nome": "Posterior e glúteos",
+          "descricao": "Cadeira flexora — 3 séries · 10–12 repetições · descanso: 90s\nStiff com halteres — 2 séries · 10–12 repetições · descanso: 90s\nElevação pélvica — 3 séries · 10–12 repetições · descanso: 90s\nGlúteo no cabo (coice) — 2 séries · 12–15 repetições por perna · descanso: 60s\nCadeira abdutora — 2 séries · 15–20 repetições · descanso: 60s\n\nOrientações: mantenha o treino em intensidade compatível com a recuperação da segunda e quarta-feira. Evite treinar até a falha em todas as séries.",
+          "concluido": 0,
+          "dia_semana": 5
+        }
+      ]
+    }
+  ]
+}
