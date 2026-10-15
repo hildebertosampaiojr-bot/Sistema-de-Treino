@@ -107,24 +107,28 @@ img{max-width:100%}
   .workout-card{padding:16px;border-radius:16px}.workout-heading h3{font-size:21px;line-height:1.4}
   .workout-progress{white-space:normal;font-size:12px}.workout-card p{font-size:14px;line-height:1.75}
   .workout-footer{gap:14px}.workout-footer>span{font-size:12px}.close-workout{min-height:50px;font-size:14px;line-height:1.5;white-space:normal}
-  /* A mesma ficha vira blocos por exercício, com os mesmos campos e estado. */
+  /* Ficha compacta: nome e dados em duas faixas, com o check ao lado. */
   .interactive-table-container{border:0;border-radius:0;overflow:visible;margin:20px 0}
   .interactive-table{display:block;width:100%;min-width:0;line-height:1.5}
   .interactive-table thead,.summary-table thead{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-  .interactive-table tbody{display:grid;gap:14px}
-  .interactive-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:'exercicio exercicio feito' 'series repeticoes repeticoes' 'carga carga descanso';gap:16px 12px;border:1px solid var(--border);border-radius:12px;padding:16px;min-width:0}
+  .interactive-table tbody{display:grid;gap:8px}
+  .interactive-table tbody tr{display:grid;grid-template-columns:44px max-content minmax(0,1fr) 68px max-content;grid-template-areas:'feito exercicio exercicio exercicio exercicio' 'feito series repeticoes carga descanso';gap:6px 4px;align-items:center;border:1px solid var(--border);border-radius:10px;padding:10px 8px;min-width:0}
   .interactive-table tbody tr td:nth-child(n){width:auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:0;padding:0;overflow-wrap:anywhere;white-space:normal;font-size:14px;gap:6px}
-  .interactive-table td::before{content:attr(data-label);font-size:11px;font-weight:500;color:var(--muted);line-height:1.4}
+  .interactive-table td::before{content:none}
   .interactive-table tbody tr td:nth-child(1){grid-area:feito;align-items:center;justify-content:center}
-  .interactive-table tbody tr td:nth-child(2){grid-area:exercicio;justify-content:center;font-size:15px;font-weight:600}
+  .interactive-table tbody tr td:nth-child(2){grid-area:exercicio;justify-content:center;font-size:14px;font-weight:600;line-height:1.4}
   .interactive-table td:nth-child(2)::before{content:none}
-  .interactive-table tbody tr td:nth-child(3){grid-area:series}
-  .interactive-table tbody tr td:nth-child(4){grid-area:repeticoes}
-  .interactive-table tbody tr td:nth-child(5){grid-area:carga}
-  .interactive-table tbody tr td:nth-child(6){grid-area:descanso}
+  .interactive-table tbody tr td:nth-child(3){grid-area:series;flex-direction:row;align-items:center;gap:3px;font-size:12px}
+  .interactive-table td:nth-child(3)::after{content:"×";color:var(--muted)}
+  .interactive-table tbody tr td:nth-child(4){grid-area:repeticoes;font-size:12px;line-height:1.3}
+  .interactive-table tbody tr td:nth-child(5){grid-area:carga;position:relative}
+  .interactive-table td:nth-child(5)::before{content:"kg";position:absolute;right:7px;top:50%;transform:translateY(-50%);font-size:10px;color:var(--muted);pointer-events:none}
+  .interactive-table tbody tr td:nth-child(6){grid-area:descanso;flex-direction:row;align-items:center;gap:3px;white-space:nowrap;font-size:11px}
+  .interactive-table td:nth-child(6)::before{content:"⏱";font-size:12px;color:var(--muted)}
   .interactive-table .exercise-check{width:44px;height:44px;min-height:44px}
   .exercise-check:checked:after{font-size:23px}
-  .interactive-table .load-input{width:100%;max-width:180px;min-height:48px;font-size:16px;padding:10px}
+  .interactive-table .load-input{width:68px;max-width:100%;min-height:44px;font-size:16px;padding:8px 22px 8px 4px;appearance:textfield;-moz-appearance:textfield}
+  .interactive-table .load-input::-webkit-inner-spin-button,.interactive-table .load-input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
   .evolution-metrics{gap:10px}.metric-card{padding:17px 14px;min-width:0}.metric-card strong{font-size:29px;overflow-wrap:anywhere}.metric-card span{font-size:12px;overflow-wrap:anywhere}
   .summary-panel{padding:18px 14px}.summary-panel h3{font-size:18px;line-height:1.5;overflow-wrap:anywhere}
   .summary-description,.summary-empty{font-size:14px}
@@ -155,7 +159,7 @@ img{max-width:100%}
 }
 @media(max-width:359px){
   .site-header{gap:10px}.header-note{font-size:7px;max-width:70px;letter-spacing:.5px}.brand-name{font-size:16px}
-  .interactive-table tbody tr{padding:12px;gap:14px 8px}.summary-panel{padding:16px 12px}.metric-card{padding:14px 11px}
+  .interactive-table tbody tr{padding:8px 6px;gap:6px 3px}.summary-panel{padding:16px 12px}.metric-card{padding:14px 11px}
   .edit-photo-row{flex-direction:column;align-items:flex-start}.profile-card{padding:18px;column-gap:14px}.frequency-chart{gap:4px}
 }
 @media(pointer:coarse){button,a,input,summary{touch-action:manipulation}}
