@@ -65,3 +65,24 @@
 .app-page.light-appearance .profile-menu button { color: #30343b; }
 .app-page.light-appearance .app-nav { border-color: #d5d7de; background: #fffffff0; }
 .app-page.light-appearance .exercise-dialog-content > p:not(.eyebrow):not(.exercise-dialog-summary),.app-page.light-appearance .exercise-dialog-summary { color: #444a54; }
+
+/* Ajustes completos para a troca de aparencia nas telas internas. */
+.app-page.light-appearance .mini-brand,
+.app-page.light-appearance .welcome-block,
+.app-page.light-appearance .workouts-topbar,
+.app-page.light-appearance .profile-menu-feedback,
+.app-page.light-appearance .calendar-month-nav,
+.app-page.light-appearance .calendar-heading,
+.app-page.light-appearance .training-calendar-card,
+.app-page.light-appearance .week-card,
+.app-page.light-appearance .load-evolution-card,
+.app-page.light-appearance .history-card { color: #242832; }
+.app-page.light-appearance .mini-brand small,
+.app-page.light-appearance .welcome-block p,
+.app-page.light-appearance .calendar-hint,
+.app-page.light-appearance .load-chart-empty,
+.app-page.light-appearance .nav-link:not(.active) { color: #626873; }
+.app-page.light-appearance .avatar-initial { color: #252833; background: color-mix(in srgb, var(--accent), white 87%); }
+.app-page.light-appearance .profile-menu button:hover { background: #edf0f4; }
+.app-page.light-appearance .today-card { background-color: #fff; }
+.app-page.light-appearance .app-nav .nav-link.active { color: var(--accent); }
