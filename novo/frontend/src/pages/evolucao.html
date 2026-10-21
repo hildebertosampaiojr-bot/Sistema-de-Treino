@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090a0d" />
+  <title>Relatório de evolução - AOLDEYA Fitness</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/evolucao.css" />
+</head>
+<body class="app-page evolution-page" data-page="evolution">
+  <section class="phone app-phone" aria-label="Relatório de evolução AOLDEYA Fitness">
+    <div class="app-backdrop" aria-hidden="true"></div>
+    <div class="status" aria-hidden="true"><span>9:41</span><div class="island"></div><div class="signals"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="wifi"></span><span class="battery"><i></i></span></div></div>
+    <main class="app-main evolution-main">
+      <header class="workouts-topbar"><a class="back app-back" href="dashboard.html" aria-label="Voltar ao in&iacute;cio"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></a><div><p class="eyebrow">Seu progresso</p><h1>Relat&oacute;rio de evolu&ccedil;&atilde;o</h1></div><span class="avatar-initial">J</span></header>
+      <p class="report-period" id="report-period">Hist&oacute;rico de cargas registradas</p>
+      <section class="report-stats" aria-label="Resumo da evolu&ccedil;&atilde;o">
+        <article><small>Registros</small><strong id="record-count">0</strong></article>
+        <article><small>Maior carga</small><strong id="record-best">—</strong></article>
+        <article><small>Varia&ccedil;&atilde;o</small><strong id="record-change">—</strong></article>
+      </section>
+      <section class="report-chart-card">
+        <label for="exercise-filter">Exerc&iacute;cio</label>
+        <select id="exercise-filter"><option value="">Selecione um exerc&iacute;cio</option></select>
+        <svg id="report-chart" class="report-chart" role="img" aria-label="Gr&aacute;fico da evolu&ccedil;&atilde;o de carga"></svg>
+        <p id="report-empty">Registre as cargas nos seus treinos para gerar o relat&oacute;rio.</p>
+        <p id="exercise-insight" class="exercise-insight"></p>
+      </section>
+      <section class="history-card"><div class="history-heading"><h2>Hist&oacute;rico por treino</h2><button id="print-report" type="button">Imprimir / salvar PDF</button></div><div id="load-history" class="load-history"></div></section>
+      <nav class="app-nav" aria-label="Navega&ccedil;&atilde;o principal"><a class="nav-link" href="dashboard.html"><span>+</span>In&iacute;cio</a><a class="nav-link active" href="meus-treinos.html"><span>+</span>Meus treinos</a></nav>
+    </main>
+  </section>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/progress.js" defer></script>
+  <script src="../scripts/evolucao.js" defer></script>
+</body>
+</html>

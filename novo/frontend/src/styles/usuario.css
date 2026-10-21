@@ -1,0 +1,36 @@
+.user-page { --accent: var(--red); background: radial-gradient(ellipse at 50% 45%, #291114 0, #101114 43%, #08090b 78%); }
+.user-page.profile-pink { --accent: #f020b4; }
+    .user-phone { background: #090a0d; }
+    .user-glow { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 43%, #40131788 0, #141115a8 36%, #090a0d 72%); }
+    .back { position: absolute; z-index: 2; top: 82px; left: 22px; width: 42px; height: 42px; display: grid; place-items: center; color: white; }
+    .back svg { width: 27px; height: 27px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .user-main { inset: 112px 22px 0; align-items: stretch; }
+    .user-brand { align-self: center; text-align: center; margin: 0 0 28px; }
+    .user-brand .brand-mark { margin: 0; width: 70px; height: 45px; }
+    .user-brand .brand-name { font-size: 25px; letter-spacing: -1px; }
+    .user-brand .brand-sub { font-size: 9px; letter-spacing: 5px; margin-top: 5px; }
+    .user-brand .brand-sub:before,.user-brand .brand-sub:after { width: 10px; margin-right: 5px; }
+    .user-brand .brand-sub:after { margin: 0 0 0 5px; }
+    .user-heading { text-align: center; margin-bottom: 25px; }
+    .user-heading h1 { max-width: none; margin: 0 0 5px; color: #f5f5f7; font-size: 26px; font-weight: 750; line-height: 1.2; }
+    .user-heading p { margin: 0; color: #aab0bb; font-size: 16px; }
+    .profiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+    .profile-card { position: relative; min-width: 0; height: clamp(280px, 49vh, 390px); overflow: hidden; padding: 0; border: 2px solid #4a4b53; border-radius: 22px; color: white; background: #151519; text-align: center; cursor: pointer; transition: border-color .2s, transform .2s, box-shadow .2s; }
+    .profile-card.selected { border-color: var(--accent); box-shadow: 0 0 18px color-mix(in srgb, var(--accent), transparent 70%); }
+    .profile-card:active { transform: scale(.985); }
+    .profile-photo { position: absolute; inset: 0; background-position: center; background-size: cover; transition: transform .35s; }
+    .profile-card:hover .profile-photo { transform: scale(1.04); }
+    .junior-photo { background-image: linear-gradient(0deg, #08090cf5 0%, #08090c14 54%, #08090c32 100%), url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85"); }
+    .gabriella-photo { background-image: linear-gradient(0deg, #08090cf5 0%, #08090c14 54%, #08090c32 100%), url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=85"); }
+    .check { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; display: grid; place-items: center; border: 2px solid #777b83; border-radius: 50%; background: #090a0d77; }
+    .check svg { display: none; width: 19px; height: 19px; fill: none; stroke: white; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
+    .selected .check { border-color: var(--accent); background: var(--accent); }
+    .selected .check svg { display: block; }
+    .profile-info { position: absolute; left: 8px; right: 8px; bottom: 20px; display: grid; gap: 5px; text-shadow: 0 2px 9px #000; }
+    .profile-info strong { font-size: 21px; }
+    .profile-info span { color: #d0d3da; font-size: 14px; }
+    .user-bottom { margin-top: auto; padding: 18px 0 26px; }
+    .enter-button { width: 100%; border: 0; cursor: pointer; font-family: inherit; }
+    .enter-button:focus-visible,.profile-card:focus-visible,.back:focus-visible,.button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+    @media (max-width: 500px) { .user-main { inset: 112px 22px 0; }.user-heading h1 { font-size: 25px; }.profiles { gap: 12px; }.profile-card { height: clamp(280px, 48vh, 390px); border-radius: 20px; }.profile-info strong { font-size: 19px; }.profile-info span { font-size: 13px; } }
+    @media (max-height: 760px) { .user-main { top: 92px; }.user-brand { margin-bottom: 15px; }.user-heading { margin-bottom: 16px; }.profile-card { height: min(43vh, 320px); }.user-bottom { padding-bottom: 16px; }.user-heading h1 { font-size: 23px; } }

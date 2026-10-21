@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090a0d" />
+  <title>in&iacute;cio - AOLDEYA Fitness</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+</head>
+<body class="app-page dashboard-page" data-page="dashboard">
+  <section class="phone app-phone" aria-label="Painel AOLDEYA Fitness">
+    <div class="app-backdrop" aria-hidden="true"></div>
+    <div class="status" aria-hidden="true"><span>9:41</span><div class="island"></div><div class="signals"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="wifi"></span><span class="battery"><i></i></span></div></div>
+    <main class="app-main dashboard-main">
+      <header class="app-topbar">
+        <a class="mini-brand" href="dashboard.html" aria-label="AOLDEYA Fitness in&iacute;cio"><span class="mini-logo">A</span><span>AOLDEYA<small>FITNESS</small></span></a>
+        <div class="profile-menu-wrap">
+          <button class="change-user" id="profile-menu-toggle" type="button" aria-label="Abrir menu do perfil" aria-expanded="false" aria-controls="profile-menu"><span class="avatar-initial">J</span><img id="profile-avatar-photo" alt="" hidden /></button>
+          <div class="profile-menu" id="profile-menu" aria-label="Opções de perfil" hidden><button type="button" data-profile-action="photo">Editar foto de perfil</button><button type="button" data-profile-action="details">Editar dados do perfil</button><button class="profile-menu-logout" type="button" data-profile-action="logout">Sair</button><p id="profile-menu-feedback" class="profile-menu-feedback" role="status" aria-live="polite"></p></div>
+          <input id="profile-photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden />
+        </div>
+      </header>
+      <section class="welcome-block">
+        <p class="eyebrow" id="welcome-greeting">Ol&aacute;, Junior</p>
+        <h1 id="welcome-title">Bora treinar hoje?</h1>
+      </section>
+      <section class="goal-card">
+        <span class="goal-icon" aria-hidden="true">?</span>
+        <div><small>Seu objetivo</small><strong id="profile-goal">Ganho de massa e for&ccedil;a</strong></div>
+      </section>
+      <section class="stats-grid" aria-label="Suas medidas">
+        <button class="stat-card measure-edit" type="button" aria-label="Editar peso" aria-haspopup="dialog"><span class="stat-icon">?</span><small>Peso</small><strong><span id="profile-weight">78</span> <small>kg</small></strong></button>
+        <button class="stat-card measure-edit" type="button" aria-label="Editar altura" aria-haspopup="dialog"><span class="stat-icon">?</span><small>Altura</small><strong id="profile-height">1,75 m</strong></button>
+        <article class="stat-card"><span class="stat-icon">?</span><small>IMC</small><strong id="profile-bmi">25,5</strong></article>
+      </section>
+      <dialog class="measures-dialog" id="measures-dialog" aria-labelledby="measures-title"><form id="measures-form"><button class="measures-close" type="button" id="close-measures" aria-label="Fechar">&times;</button><h2 id="measures-title">Atualizar medidas</h2><label for="weight-input">Peso (kg)</label><input id="weight-input" name="weight" type="number" min="20" max="400" step="0.1" required /><label for="height-input">Altura (m)</label><input id="height-input" name="height" type="number" min="0.8" max="2.5" step="0.01" required /><p class="bmi-preview" id="bmi-preview">IMC calculado: 25,5</p><p id="measure-feedback" role="status" aria-live="polite"></p><button class="button primary" type="submit">Salvar medidas</button></form></dialog>
+      <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-dialog-title"><form id="profile-form"><button class="measures-close" id="close-profile-dialog" type="button" aria-label="Fechar">&times;</button><h2 id="profile-dialog-title">Editar dados do perfil</h2><label for="profile-name-input">Nome</label><input id="profile-name-input" type="text" maxlength="80" required /><p id="profile-feedback" role="status" aria-live="polite"></p><button class="button primary" type="submit">Salvar altera&ccedil;&otilde;es</button></form></dialog>
+      <section class="week-card">
+        <div class="section-heading"><h2>Semana atual</h2><a href="meus-treinos.html">Ver treinos <span>></span></a></div>
+        <div class="week-progress" aria-label="Resumo semanal">
+          <span class="week-day done"><i></i><small>Seg</small></span><span class="week-day done"><i></i><small>Ter</small></span><span class="week-day"><i></i><small>Qua</small></span><span class="week-day"><i></i><small>Qui</small></span><span class="week-day"><i></i><small>Sex</small></span><span class="week-day"><i></i><small>S&aacute;b</small></span><span class="week-day"><i></i><small>Dom</small></span>
+        </div>
+      </section>
+      <section class="today-card">
+        <div class="today-image" id="today-image" aria-hidden="true"></div>
+        <div class="today-shade"></div>
+        <div class="today-caption"><span class="today-label"><span class="mini-dumbbell">?</span> Treino de hoje</span><strong id="today-workout-title">Peito</strong><small id="today-workout-day">Segunda-feira</small></div>
+        <a class="button primary today-button" href="meus-treinos.html?dia=seg">Iniciar treino<svg viewBox="0 0 24 24"><path d="M4 12h15m-7-7 7 7-7 7"/></svg></a>
+      </section>
+      <section class="load-evolution-card"><div class="section-heading"><div><h2>Evolu&ccedil;&atilde;o de cargas</h2><p id="load-chart-exercise">Registre cargas nos seus treinos</p></div><a href="evolucao.html?usuario=Junior" class="report-link">Relat&oacute;rio</a></div><svg id="load-evolution-chart" class="load-chart" role="img" aria-label="Gr&aacute;fico da evolu&ccedil;&atilde;o de cargas"></svg><p class="load-chart-empty" id="load-chart-empty">Suas cargas registradas aparecer&atilde;o aqui.</p></section>
+      <section class="training-calendar-card" aria-labelledby="calendar-title">
+        <div class="calendar-heading"><div><h2 id="calendar-title">Calend&aacute;rio de treinos</h2><p id="calendar-count">Dias em que voc&ecirc; treinou</p></div><div class="calendar-month-nav"><button id="calendar-previous" type="button" aria-label="M&ecirc;s anterior">‹</button><strong id="calendar-month"></strong><button id="calendar-next" type="button" aria-label="Pr&oacute;ximo m&ecirc;s">›</button></div></div>
+        <div class="calendar-weekdays" aria-hidden="true"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>S&aacute;b</span><span>Dom</span></div>
+        <div class="calendar-days" id="calendar-days" aria-label="Dias do m&ecirc;s"></div>
+        <p class="calendar-hint"><i></i> Dia de treino registrado · Toque em uma data para registrar</p>
+      </section>
+      <dialog class="training-dialog" id="training-dialog" aria-labelledby="training-dialog-title"><form id="training-form"><button class="measures-close" id="close-training-dialog" type="button" aria-label="Fechar">&times;</button><h2 id="training-dialog-title">Registrar treino</h2><p id="training-date-label"></p><label for="training-name-input">Treino realizado</label><input id="training-name-input" maxlength="100" required value="Treino registrado" /><p id="training-feedback" role="status" aria-live="polite"></p><button class="button primary" type="submit">Registrar dia</button></form></dialog>
+      <nav class="app-nav" aria-label="Navega&ccedil;&atilde;o principal"><a class="nav-link active" href="dashboard.html"><span>+</span>In&iacute;cio</a><a class="nav-link" href="meus-treinos.html"><span>+</span>Meus treinos</a></nav>
+    </main>
+  </section>
+  <script src="../data/workouts.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/progress.js" defer></script>
+  <script src="../scripts/dashboard.js" defer></script>
+</body>
+</html>

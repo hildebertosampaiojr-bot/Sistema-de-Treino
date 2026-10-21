@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus treinos · AOLDEYA FITNESS</title>
+  <script src="../js/aparencia.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/treinos.js"></script>
+  <script type="module" src="../js/menu-perfil.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="AOLDEYA FITNESS, início"><span class="brand-icon" aria-hidden="true">↗</span><span class="brand-name">AOLDEYA<span class="brand-subtitle">FITNESS</span></span></a>
+    <div id="profile-control" class="profile-control">
+      <button id="profile-trigger" class="profile-avatar" type="button" aria-label="Abrir menu do perfil" aria-expanded="false" aria-controls="profile-menu">J</button>
+      <div id="profile-menu" class="profile-menu" role="region" aria-label="Opções do perfil" hidden>
+        <div class="profile-menu-heading"><strong id="menu-profile-name">Meu perfil</strong><span>Seu espaço, do seu jeito</span></div>
+        <button id="edit-profile" class="menu-action" type="button"><span aria-hidden="true">✎</span> Editar perfil</button>
+        <fieldset class="menu-group"><legend>Tema</legend><div class="theme-choices">
+          <button type="button" data-theme-choice="claro" aria-pressed="true">☀ Claro</button>
+          <button type="button" data-theme-choice="escuro" aria-pressed="false">☾ Escuro</button>
+        </div></fieldset>
+        <fieldset class="menu-group"><legend>Personalizar</legend><div class="palette-choices">
+          <button type="button" data-palette-choice="azul" aria-pressed="false"><span class="palette-swatch swatch-blue" aria-hidden="true"></span>Azul e fundo escuro</button>
+          <button type="button" data-palette-choice="vermelho" aria-pressed="false"><span class="palette-swatch swatch-red" aria-hidden="true"></span>Vermelho e preto</button>
+          <button type="button" data-palette-choice="laranja" aria-pressed="false"><span class="palette-swatch swatch-orange" aria-hidden="true"></span>Preto e laranja</button>
+          <button type="button" data-palette-choice="verde" aria-pressed="true"><span class="palette-swatch swatch-green" aria-hidden="true"></span>Verde e branco</button>
+          <button type="button" data-palette-choice="amarelo" aria-pressed="false"><span class="palette-swatch swatch-yellow" aria-hidden="true"></span>Amarelo e cinza escuro</button>
+        </div></fieldset>
+        <p id="menu-status" class="menu-status" role="status"></p>
+        <a class="menu-action switch-profile-action" href="../index.html"><span aria-hidden="true">↪</span> Trocar de perfil</a>
+      </div>
+    </div>
+  </header>
+  <dialog id="profile-dialog" class="profile-dialog" aria-labelledby="edit-profile-title">
+    <form id="edit-profile-form">
+      <h2 id="edit-profile-title">Editar perfil</h2>
+      <p class="section-description">Atualize sua foto e seu nome.</p>
+      <div class="edit-photo-row"><span id="edit-avatar" class="profile-avatar edit-avatar" aria-hidden="true"></span><div>
+        <label for="profile-photo" class="photo-label">Escolher foto</label>
+        <input id="profile-photo" name="foto" type="file" accept="image/jpeg,image/png,image/webp">
+        <button id="remove-photo" class="text-button" type="button">Remover foto</button>
+      </div></div>
+      <p class="photo-hint">JPG, PNG ou WebP, até 5 MB. Sua foto fica neste navegador.</p>
+      <label for="profile-name">Nome</label><input id="profile-name" name="nome" required maxlength="50" autocomplete="nickname">
+      <p id="profile-error" class="menu-status" role="status"></p>
+      <div class="dialog-actions"><button id="cancel-profile" class="secondary-button" type="button">Cancelar</button><button class="close-workout" type="submit">Salvar perfil</button></div>
+    </form>
+  </dialog>
+  <main class="dashboard">
+    <span id="profile-label" class="eyebrow muted"></span>
+    <section class="week-section" aria-labelledby="week-title">
+      <h2 id="week-title">Sua semana de treinos</h2>
+      <p class="section-description">Selecione um dia para treinar ou acompanhe sua evolução no Resumo.</p>
+      <div class="week-days" role="group" aria-label="Filtrar treinos por dia da semana">
+        <button type="button" class="day-button" data-day="resumo" aria-pressed="true">Resumo</button>
+        <button type="button" class="day-button" data-day="1" aria-pressed="false">Segunda-feira</button>
+        <button type="button" class="day-button" data-day="2" aria-pressed="false">Terça-feira</button>
+        <button type="button" class="day-button" data-day="3" aria-pressed="false">Quarta-feira</button>
+        <button type="button" class="day-button" data-day="4" aria-pressed="false">Quinta-feira</button>
+        <button type="button" class="day-button" data-day="5" aria-pressed="false">Sexta-feira</button>
+        <button type="button" class="day-button" data-day="6" aria-pressed="false">Sábado</button>
+        <button type="button" class="day-button" data-day="7" aria-pressed="false">Domingo</button>
+      </div>
+    </section>
+    <p id="storage-note" class="storage-note"></p>
+    <div class="dashboard-grid">
+      <section class="workout-section" aria-labelledby="workouts-title"><div class="section-heading"><h2 id="workouts-title">Sua evolução</h2><button id="refresh" class="text-button" type="button">Atualizar ↻</button></div><div id="workouts" class="workouts" aria-busy="true"></div></section>
+    </div>
+  </main>
+  <footer class="site-footer"><span>Feito para evoluir, juntos.</span><span>UM TREINO DE CADA VEZ.</span></footer>
+</body>
+</html>

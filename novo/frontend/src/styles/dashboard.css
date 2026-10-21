@@ -1,0 +1,96 @@
+.welcome-block { margin: 1px 0 0; }
+    .eyebrow { margin: 0 0 4px; color: #b8bbc4; font-size: 12px; }
+    .welcome-block h1 { max-width: none; margin: 0; color: #f7f7f9; font-size: 23px; font-weight: 750; line-height: 1.2; }
+    .goal-card { display: flex; align-items: center; gap: 11px; min-height: 54px; padding: 9px 12px; border: 1px solid color-mix(in srgb, var(--accent), transparent 18%); border-radius: 14px; background: linear-gradient(100deg, color-mix(in srgb, var(--accent), #111 78%), #171316); }
+    .goal-icon { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 10px; color: var(--accent); font-size: 29px; font-weight: 700; }
+    .goal-card div { display: grid; gap: 2px; }
+    .goal-card small { color: #c8cbd2; font-size: 10px; }
+    .goal-card strong { color: #fff; font-size: 13px; font-weight: 600; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .stat-card { position: relative; min-height: 66px; display: grid; align-content: center; gap: 3px; padding: 9px 10px; border: 1px solid #292b30; border-radius: 13px; background: #15171a; }
+    .stat-card > small { color: #aeb2bb; font-size: 10px; }
+    .stat-card strong { color: #f7f7f8; font-size: 15px; }
+    .stat-card strong small { color: #c0c3cb; font-size: 10px; font-weight: 500; }
+    .stat-icon { position: absolute; top: 9px; right: 9px; color: var(--accent); font-size: 16px; }
+    .week-card { padding: 12px 12px 10px; border: 1px solid #292b30; border-radius: 15px; background: #131518; }
+    .section-heading { display: flex; align-items: center; justify-content: space-between; }
+    .section-heading h2 { margin: 0; font-size: 13px; font-weight: 650; }
+    .section-heading a { color: var(--accent); text-decoration: none; font-size: 10px; }
+    .section-heading a span { font-size: 17px; vertical-align: -1px; }
+    .week-progress { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 10px; }
+    .week-day { display: grid; justify-items: center; gap: 5px; color: #aeb2ba; font-size: 9px; }
+    .week-day i { width: 15px; height: 23px; border: 1px solid #353840; border-radius: 5px; background: linear-gradient(#555a62 0 30%, #25282d 30%); }
+    .week-day.done i,.week-day.has-workout i { border-color: var(--accent); background: linear-gradient(var(--accent) 0 100%); }
+    .today-card { position: relative; min-height: 190px; flex: 1 0 190px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--accent), transparent 8%); border-radius: 16px; background: #181417; }
+    .today-image { position: absolute; inset: 0; background-position: center 37%; background-size: cover; background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85"); opacity: .55; }
+    .profile-pink .today-image { background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85"); }
+    .today-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #100d10 0%, #100d10a6 58%, #100d1055 100%), linear-gradient(0deg,#090a0d 0%,transparent 70%); }
+    .today-caption { position: absolute; left: 13px; top: 12px; display: grid; gap: 4px; }
+    .today-label { color: #f0f0f3; font-size: 11px; }
+    .mini-dumbbell { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 5px; border-radius: 7px; color: var(--accent); background: #21191d; font-size: 18px; vertical-align: middle; }
+    .today-caption strong { font-size: 20px; }
+    .today-caption > small { color: #c0c3cb; font-size: 11px; }
+    .today-button { position: absolute; left: 10px; right: 10px; bottom: 10px; height: 43px; font-size: 13px; }
+    .today-button svg,.finish-workout svg { right: 15px; width: 19px; height: 19px; }
+
+.measures-dialog { width: min(360px, calc(100vw - 36px)); padding: 0; border: 1px solid #373a42; border-radius: 18px; color: #f7f7f8; background: #141619; box-shadow: 0 20px 70px #000c; }
+.measures-dialog::backdrop { background: #000b; backdrop-filter: blur(4px); }
+.measures-dialog form { display: grid; gap: 10px; padding: 22px; }
+.measures-dialog h2 { margin: 0 38px 8px 0; font-size: 19px; }
+.measures-dialog label { color: #c8cbd2; font-size: 12px; }
+.measures-dialog input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #3a3d45; border-radius: 10px; outline-color: var(--accent); color: white; background: #0e1013; font: inherit; }
+.measures-dialog form .button { position: static; height: 44px; margin-top: 5px; border: 0; cursor: pointer; font: inherit; }
+.measures-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: 1px solid #555963; border-radius: 50%; color: white; background: transparent; font-size: 21px; cursor: pointer; }
+#measure-feedback { min-height: 16px; margin: 0; color: #ff6874; font-size: 11px; }
+
+.bmi-preview { margin: 2px 0; color: #fff; font-size: 13px; font-weight: 650; }
+
+.stat-card.measure-edit { width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: border-color .18s, background .18s; }
+.stat-card.measure-edit:hover,.stat-card.measure-edit:focus-visible { border-color: var(--accent); background: #1b191c; }
+.stat-card.measure-edit:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.training-calendar-card { padding: 12px; border: 1px solid #292b30; border-radius: 15px; background: #131518; }
+.calendar-heading { display: flex; align-items: center; justify-content: space-between; gap: 7px; }
+.calendar-heading h2 { margin: 0; font-size: 13px; }
+.calendar-heading p { margin: 4px 0 0; color: #aeb2bc; font-size: 9px; }
+.calendar-month-nav { display: flex; align-items: center; gap: 5px; }
+.calendar-month-nav strong { min-width: 75px; color: #e7e8eb; text-align: center; font-size: 10px; text-transform: capitalize; }
+.calendar-month-nav button { width: 25px; height: 25px; padding: 0; border: 1px solid #383b43; border-radius: 50%; color: var(--accent); background: #1a1c20; font-size: 18px; line-height: 1; cursor: pointer; }
+.calendar-weekdays,.calendar-days { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 4px; }
+.calendar-weekdays { margin: 11px 0 5px; color: #888e99; text-align: center; font-size: 8px; }
+.calendar-days { grid-auto-rows: 34px; }
+.calendar-day,.calendar-spacer { min-width: 0; }
+.calendar-day { position: relative; display: grid; place-items: center; padding: 0; border: 1px solid transparent; border-radius: 9px; color: #d9dbe0; background: transparent; font: inherit; font-size: 10px; cursor: pointer; }
+.calendar-day:hover:not(:disabled) { border-color: #454852; background: #202227; }
+.calendar-day.is-today { border-color: color-mix(in srgb, var(--accent), transparent 35%); }
+.calendar-day.is-trained { color: #fff; background: var(--accent); font-weight: 750; box-shadow: 0 2px 8px color-mix(in srgb, var(--accent), transparent 62%); }
+.calendar-day:disabled { color: #555963; cursor: default; }
+.calendar-hint { display: flex; align-items: center; gap: 6px; margin: 9px 0 0; color: #9398a2; font-size: 9px; }
+.calendar-hint i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.training-dialog { position: fixed; width: min(360px, calc(100vw - 32px)); padding: 0; border: 1px solid #373a42; border-radius: 18px; color: #f7f7f8; background: #141619; box-shadow: 0 20px 70px #000c; }
+.training-dialog::backdrop { background: #000b; backdrop-filter: blur(4px); }
+.training-dialog form { display: grid; gap: 10px; padding: 22px; }
+.training-dialog h2 { margin: 0 38px 0 0; font-size: 19px; }
+.training-dialog form > p { margin: 0; color: #aeb2bc; font-size: 11px; }
+.training-dialog label { color: #c8cbd2; font-size: 12px; }
+.training-dialog input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #3a3d45; border-radius: 10px; outline-color: var(--accent); color: white; background: #0e1013; font: inherit; }
+.training-dialog form .button { position: static; height: 44px; margin-top: 5px; border: 0; cursor: pointer; font: inherit; }
+#training-feedback { min-height: 15px; color: var(--accent); }.profile-menu-wrap { position: relative; }
+.change-user { display: grid; place-items: center; padding: 0; overflow: hidden; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.change-user:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.change-user img { width: 35px; height: 35px; border: 1px solid color-mix(in srgb, var(--accent), transparent 20%); border-radius: 50%; object-fit: cover; }
+.change-user img[hidden] { display: none; }
+.change-user.has-photo .avatar-initial { display: none; }
+.profile-menu { position: absolute; z-index: 20; top: calc(100% + 9px); right: 0; width: 205px; padding: 6px; border: 1px solid #383b43; border-radius: 13px; background: #17191d; box-shadow: 0 12px 34px #000b; }
+.profile-menu[hidden] { display: none; }
+.profile-menu button { width: 100%; padding: 11px 10px; border: 0; border-radius: 8px; color: #e6e7eb; text-align: left; background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+.profile-menu button:hover,.profile-menu button:focus-visible { outline: 0; background: #25272d; }
+.profile-menu .profile-menu-logout { margin-top: 4px; border-top: 1px solid #343740; border-radius: 0 0 8px 8px; color: #ff6674; }
+.profile-dialog { position: fixed; width: min(360px, calc(100vw - 32px)); padding: 0; border: 1px solid #373a42; border-radius: 18px; color: #f7f7f8; background: #141619; box-shadow: 0 20px 70px #000c; }
+.profile-dialog::backdrop { background: #000b; backdrop-filter: blur(4px); }
+.profile-dialog form { display: grid; gap: 10px; padding: 22px; }
+.profile-dialog h2 { margin: 0 38px 8px 0; font-size: 19px; }
+.profile-dialog label { color: #c8cbd2; font-size: 12px; }
+.profile-dialog input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #3a3d45; border-radius: 10px; outline-color: var(--accent); color: white; background: #0e1013; font: inherit; }
+.profile-dialog form .button { position: static; height: 44px; margin-top: 5px; border: 0; cursor: pointer; font: inherit; }
+#profile-feedback { min-height: 15px; margin: 0; color: #aeb2bc; font-size: 10px; }
+.profile-menu-feedback { margin: 4px 8px 6px; color: #aeb2bc; font-size: 9px; line-height: 1.4; }
