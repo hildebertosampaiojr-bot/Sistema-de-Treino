@@ -23,7 +23,19 @@ jobs:
         run: |
           mkdir -p _site
           cp -R novo/frontend/src/. _site/
-          cp _site/pages/index.html _site/index.html
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="refresh" content="0; url=pages/index.html">
+            <title>AOLDEYA Fitness</title>
+            <script>location.replace('pages/index.html' + location.search + location.hash);</script>
+          </head>
+          <body><a href="pages/index.html">Abrir AOLDEYA Fitness</a></body>
+          </html>
+          HTML
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
