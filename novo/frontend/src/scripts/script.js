@@ -1,4 +1,4 @@
-﻿// Dados compartilhados entre as páginas do aplicativo.
+// Dados compartilhados entre as páginas do aplicativo.
 const dayNames = {
   seg: "Segunda-feira",
   ter: "Ter\u00e7a-feira",
@@ -27,4 +27,14 @@ const activeUserName = (requestedUser || savedUser) === "Gabriella" ? "Gabriella
 const activeProfile = profiles[activeUserName];
 document.body.classList.toggle("profile-pink", activeProfile.accent === "pink");
 const apiBase = window.AOLDEYA_API_URL || "http://127.0.0.1:5000";
-window.Aoldeya = { dayNames, profiles, activeUserName, activeProfile, apiBase };
+const appearanceKey = `aoldeya-appearance-${activeUserName}`;
+let appearance = "dark";
+try { appearance = localStorage.getItem(appearanceKey) === "light" ? "light" : "dark"; } catch { /* Mantém o tema escuro padrão. */ }
+document.body.classList.toggle("light-appearance", appearance === "light");
+const toggleAppearance = () => {
+  appearance = appearance === "dark" ? "light" : "dark";
+  document.body.classList.toggle("light-appearance", appearance === "light");
+  try { localStorage.setItem(appearanceKey, appearance); } catch { /* O tema continua ativo nesta sessão. */ }
+  return appearance;
+};
+window.Aoldeya = { dayNames, profiles, activeUserName, activeProfile, apiBase, toggleAppearance };

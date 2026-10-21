@@ -65,6 +65,7 @@ const profileForm = document.querySelector("#profile-form");
 const profileNameInput = document.querySelector("#profile-name-input");
 const profileFeedback = document.querySelector("#profile-feedback");
 const menuFeedback = document.querySelector("#profile-menu-feedback");
+document.querySelector("#appearance-toggle").textContent = document.body.classList.contains("light-appearance") ? "Mudar para apar\u00eancia escura" : "Mudar para apar\u00eancia clara";
 const applyProfilePhoto = (photo) => {
   photoElement.src = photo;
   photoElement.hidden = false;
@@ -89,6 +90,10 @@ profileMenu.addEventListener("click", (event) => {
   if (action === "photo") { closeProfileMenu(); photoInput.click(); }
   if (action === "details") {
     closeProfileMenu(); profileNameInput.value = profileDisplayName; profileFeedback.textContent = ""; profileDialog.showModal();
+  }
+  if (action === "appearance") {
+    const appearance = window.Aoldeya.toggleAppearance();
+    document.querySelector("#appearance-toggle").textContent = appearance === "light" ? "Mudar para apar\u00eancia escura" : "Mudar para apar\u00eancia clara";
   }
   if (action === "logout") {
     try { localStorage.removeItem("aoldeya-user"); } catch { /* Continue to the welcome screen. */ }
@@ -147,7 +152,7 @@ photoInput.addEventListener("change", () => {
 });
 renderProfileName();
 const weekdays = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
-const orderedDays = ["seg", "ter", "qua", "qui", "sex", "sab", "dom"];
+const orderedDays = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
 const today = weekdays[new Date().getDay()];
 const userQuery = `usuario=${encodeURIComponent(activeUserName)}`;
 document.querySelector(".today-button").href = `meus-treinos.html?dia=${today}&${userQuery}`;
@@ -156,7 +161,15 @@ document.querySelectorAll('a[href="usuario.html"]').forEach((link) => { link.hre
 
 const showWorkouts = (dayMap) => {
   const days = new Set(Object.keys(dayMap));
-  document.querySelectorAll(".week-day").forEach((item, index) => item.classList.toggle("has-workout", days.has(orderedDays[index])));
+  document.querySelectorAll(".week-day").forEach((item) => {
+    const day = item.dataset.day;
+    const current = new Date();
+    const date = new Date(current.getFullYear(), current.getMonth(), current.getDate() - current.getDay() + orderedDays.indexOf(day));
+    item.classList.toggle("has-workout", days.has(day));
+    item.classList.toggle("today", day === today);
+    item.querySelector("i").textContent = String(date.getDate());
+    item.setAttribute("aria-label", `${dayNames[day]}, ${date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}${day === today ? ", hoje" : ""}`);
+  });
   const workout = dayMap[today];
   document.querySelector("#today-workout-title").textContent = workout?.name || "Dia de descanso";
   document.querySelector("#today-workout-day").textContent = dayNames[today];
@@ -183,7 +196,7 @@ const refreshCalendar = async () => {
   monthTrainingRecords = await window.AoldeyaProgress.getTrainingDays(key);
   const recordsByDate = new Map(monthTrainingRecords.map((item) => [item.trained_on, item]));
   calendarCount.textContent = `${monthTrainingRecords.length} ${monthTrainingRecords.length === 1 ? "dia treinado" : "dias treinados"}`;
-  const offset = (new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), 1).getDay() + 6) % 7;
+  const offset = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), 1).getDay();
   const count = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 0).getDate();
   const today = isoDate(new Date());
   calendarDays.innerHTML = "";

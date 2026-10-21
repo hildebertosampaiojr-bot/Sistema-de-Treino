@@ -11,13 +11,12 @@
 <body class="app-page dashboard-page" data-page="dashboard">
   <section class="phone app-phone" aria-label="Painel AOLDEYA Fitness">
     <div class="app-backdrop" aria-hidden="true"></div>
-    <div class="status" aria-hidden="true"><span>9:41</span><div class="island"></div><div class="signals"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="wifi"></span><span class="battery"><i></i></span></div></div>
     <main class="app-main dashboard-main">
       <header class="app-topbar">
         <a class="mini-brand" href="dashboard.html" aria-label="AOLDEYA Fitness in&iacute;cio"><span class="mini-logo">A</span><span>AOLDEYA<small>FITNESS</small></span></a>
         <div class="profile-menu-wrap">
           <button class="change-user" id="profile-menu-toggle" type="button" aria-label="Abrir menu do perfil" aria-expanded="false" aria-controls="profile-menu"><span class="avatar-initial">J</span><img id="profile-avatar-photo" alt="" hidden /></button>
-          <div class="profile-menu" id="profile-menu" aria-label="Opções de perfil" hidden><button type="button" data-profile-action="photo">Editar foto de perfil</button><button type="button" data-profile-action="details">Editar dados do perfil</button><button class="profile-menu-logout" type="button" data-profile-action="logout">Sair</button><p id="profile-menu-feedback" class="profile-menu-feedback" role="status" aria-live="polite"></p></div>
+          <div class="profile-menu" id="profile-menu" aria-label="Opções de perfil" hidden><button type="button" data-profile-action="photo">Editar foto de perfil</button><button type="button" data-profile-action="details">Editar dados do perfil</button><button type="button" id="appearance-toggle" data-profile-action="appearance">Mudar apar&#234;ncia</button><button class="profile-menu-logout" type="button" data-profile-action="logout">Sair</button><p id="profile-menu-feedback" class="profile-menu-feedback" role="status" aria-live="polite"></p></div>
           <input id="profile-photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden />
         </div>
       </header>
@@ -39,7 +38,7 @@
       <section class="week-card">
         <div class="section-heading"><h2>Semana atual</h2><a href="meus-treinos.html">Ver treinos <span>></span></a></div>
         <div class="week-progress" aria-label="Resumo semanal">
-          <span class="week-day done"><i></i><small>Seg</small></span><span class="week-day done"><i></i><small>Ter</small></span><span class="week-day"><i></i><small>Qua</small></span><span class="week-day"><i></i><small>Qui</small></span><span class="week-day"><i></i><small>Sex</small></span><span class="week-day"><i></i><small>S&aacute;b</small></span><span class="week-day"><i></i><small>Dom</small></span>
+          <span class="week-day" data-day="dom"><i></i><small>Dom</small></span><span class="week-day" data-day="seg"><i></i><small>Seg</small></span><span class="week-day" data-day="ter"><i></i><small>Ter</small></span><span class="week-day" data-day="qua"><i></i><small>Qua</small></span><span class="week-day" data-day="qui"><i></i><small>Qui</small></span><span class="week-day" data-day="sex"><i></i><small>Sex</small></span><span class="week-day" data-day="sab"><i></i><small>S&aacute;b</small></span>
         </div>
       </section>
       <section class="today-card">
@@ -51,7 +50,7 @@
       <section class="load-evolution-card"><div class="section-heading"><div><h2>Evolu&ccedil;&atilde;o de cargas</h2><p id="load-chart-exercise">Registre cargas nos seus treinos</p></div><a href="evolucao.html?usuario=Junior" class="report-link">Relat&oacute;rio</a></div><svg id="load-evolution-chart" class="load-chart" role="img" aria-label="Gr&aacute;fico da evolu&ccedil;&atilde;o de cargas"></svg><p class="load-chart-empty" id="load-chart-empty">Suas cargas registradas aparecer&atilde;o aqui.</p></section>
       <section class="training-calendar-card" aria-labelledby="calendar-title">
         <div class="calendar-heading"><div><h2 id="calendar-title">Calend&aacute;rio de treinos</h2><p id="calendar-count">Dias em que voc&ecirc; treinou</p></div><div class="calendar-month-nav"><button id="calendar-previous" type="button" aria-label="M&ecirc;s anterior">‹</button><strong id="calendar-month"></strong><button id="calendar-next" type="button" aria-label="Pr&oacute;ximo m&ecirc;s">›</button></div></div>
-        <div class="calendar-weekdays" aria-hidden="true"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>S&aacute;b</span><span>Dom</span></div>
+        <div class="calendar-weekdays" aria-hidden="true"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>S&aacute;b</span></div>
         <div class="calendar-days" id="calendar-days" aria-label="Dias do m&ecirc;s"></div>
         <p class="calendar-hint"><i></i> Dia de treino registrado · Toque em uma data para registrar</p>
       </section>

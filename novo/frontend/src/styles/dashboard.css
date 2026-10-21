@@ -19,8 +19,8 @@
     .section-heading a span { font-size: 17px; vertical-align: -1px; }
     .week-progress { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 10px; }
     .week-day { display: grid; justify-items: center; gap: 5px; color: #aeb2ba; font-size: 9px; }
-    .week-day i { width: 15px; height: 23px; border: 1px solid #353840; border-radius: 5px; background: linear-gradient(#555a62 0 30%, #25282d 30%); }
-    .week-day.done i,.week-day.has-workout i { border-color: var(--accent); background: linear-gradient(var(--accent) 0 100%); }
+    .week-day i { width: 23px; height: 23px; display: grid; place-items: center; border: 1px solid #353840; border-radius: 7px; color: #c4c8d1; background: #202227; font-size: 9px; font-style: normal; font-weight: 650; }
+    .week-day.done i,.week-day.has-workout i { border-color: var(--accent); color: white; background: var(--accent); }.week-day.today i { outline: 1px solid #fff; outline-offset: 2px; }
     .today-card { position: relative; min-height: 190px; flex: 1 0 190px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--accent), transparent 8%); border-radius: 16px; background: #181417; }
     .today-image { position: absolute; inset: 0; background-position: center 37%; background-size: cover; background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85"); opacity: .55; }
     .profile-pink .today-image { background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85"); }

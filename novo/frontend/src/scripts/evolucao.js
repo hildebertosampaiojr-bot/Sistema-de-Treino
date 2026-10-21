@@ -5,7 +5,6 @@
   const chart = document.querySelector("#report-chart");
   const empty = document.querySelector("#report-empty");
   const history = document.querySelector("#load-history");
-  document.querySelector(".avatar-initial").textContent = activeUserName[0];
   document.querySelectorAll('a[href="dashboard.html"]').forEach((link) => { link.href = `dashboard.html?usuario=${encodeURIComponent(activeUserName)}`; });
   document.querySelectorAll('a[href="meus-treinos.html"]').forEach((link) => { link.href = `meus-treinos.html?usuario=${encodeURIComponent(activeUserName)}`; });
 

@@ -8,7 +8,6 @@ const dialog = document.querySelector("#exercise-dialog");
 const placeholderImage = "../assets/exercise-placeholder.svg";
 const imageBase = "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/";
 const dashboardUrl = `dashboard.html?usuario=${encodeURIComponent(activeUserName)}`;
-document.querySelector(".workouts-topbar .avatar-initial").textContent = activeUserName[0];
 document.querySelectorAll('a[href="dashboard.html"]').forEach((link) => { link.href = dashboardUrl; });
 
 // IDs verificados no Free Exercise DB; as imagens do catálogo estão sob Unlicense.
@@ -111,7 +110,8 @@ const renderDay = (day) => {
     button.classList.toggle("active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
-  document.querySelector("#selected-day-label").textContent = dayNames[day];
+  const selectedDateLabel = dateByDay.get(day).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+  document.querySelector("#selected-day-label").textContent = `${dayNames[day]}, ${selectedDateLabel}`;
   document.querySelector("#selected-workout-title").textContent = workout?.name || "Dia de descanso";
   document.querySelector("#exercise-count").textContent = exercises.length ? `${exercises.length} exercícios` : "Descanso";
   document.querySelector("#rest-card").hidden = exercises.length > 0;
@@ -125,9 +125,27 @@ const renderDay = (day) => {
 };
 
 const requestedDay = new URLSearchParams(window.location.search).get("dia");
-let selectedDay = Object.hasOwn(dayNames, requestedDay) ? requestedDay : "seg";
-dayButtons.forEach((button) => button.addEventListener("click", () => { selectedDay = button.dataset.day; renderDay(selectedDay);
- }));
+const weekdays = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
+const now = new Date();
+const today = weekdays[now.getDay()];
+const weekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - now.getDay());
+const dateByDay = new Map();
+dayButtons.forEach((button) => {
+  const day = button.dataset.day;
+  const date = new Date(weekStart);
+  date.setDate(weekStart.getDate() + weekdays.indexOf(day));
+  dateByDay.set(day, date);
+  button.querySelector("small").textContent = date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+  button.classList.toggle("today", day === today);
+  button.setAttribute("aria-label", `${dayNames[day]}, ${date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}`);
+});
+let selectedDay = Object.hasOwn(dayNames, requestedDay) ? requestedDay : today;
+let selectedDate = dateByDay.get(selectedDay);
+dayButtons.forEach((button) => button.addEventListener("click", () => {
+  selectedDay = button.dataset.day;
+  selectedDate = dateByDay.get(selectedDay);
+  renderDay(selectedDay);
+}));
 renderDay(selectedDay);
 progress.getRecords().then((records) => { loadRecords = records; renderDay(selectedDay); });
 document.querySelector("#exercise-dialog-close").addEventListener("click", () => dialog.close());
@@ -186,8 +204,7 @@ fetch(`${apiBase}/api/users`)
 document.querySelector(".finish-workout")?.addEventListener("click", async (event) => {
   const button = event.currentTarget;
   button.disabled = true;
-  const now = new Date();
-  const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  const date = `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, "0")}-${String(selectedDate.getDate()).padStart(2, "0")}`;
   const result = await progress.saveTrainingDay({ date, workoutName: workoutsByDay[selectedDay]?.name || "Treino concluido", workoutDay: selectedDay, source: "completed" });
   button.textContent = result.synced ? "Treino registrado" : "Treino salvo neste dispositivo";
   button.classList.add("completed");

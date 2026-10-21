@@ -5,15 +5,9 @@
     .phone { position: relative; width: min(100vw, 430px); height: min(100dvh, 900px); min-height: 700px; overflow: hidden; isolation: isolate; border: 1px solid #696a71; border-radius: 54px; background: #08090c; box-shadow: 0 0 0 5px #17181d, 0 0 0 7px #77777d, 0 34px 100px #000b; }
     .hero { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #08090c 0%, #08090ce8 31%, #08090c75 58%, #08090c16 100%), linear-gradient(0deg, #08090c 0%, transparent 36%, #08090c14 100%), url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85") center / cover; opacity: .93; }
     .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,#08090c 0%,transparent 22%,transparent 65%,#08090c66 100%); }
-    .status { position: absolute; z-index: 3; top: 18px; left: 30px; right: 30px; height: 28px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 650; }
-    .island { position: absolute; left: 50%; top: 10px; transform: translateX(-50%); width: 112px; height: 34px; border-radius: 25px; background: #000; }
-    .signals { display: flex; gap: 7px; align-items: center; }
-    .bars { height: 15px; width: 17px; display: flex; align-items: end; gap: 2px; }
     .bars i { display: block; width: 3px; border-radius: 2px; background: white; height: 6px; }.bars i:nth-child(2){height:9px}.bars i:nth-child(3){height:12px}.bars i:nth-child(4){height:15px}
-    .wifi { width: 16px; height: 12px; border-top: 2px solid white; border-radius: 50%; position: relative; transform: scaleX(1.2); }.wifi:before,.wifi:after{content:"";position:absolute;left:3px;right:3px;top:3px;height:7px;border-top:2px solid white;border-radius:50%}.wifi:after{left:7px;right:7px;top:7px;height:2px;background:white;border:0}
-    .battery { width: 23px; height: 12px; border: 1.5px solid white; border-radius: 3px; padding: 2px; position: relative; }.battery:after{content:"";position:absolute;right:-4px;top:3px;width:2px;height:4px;background:white;border-radius:0 2px 2px 0}.battery i{display:block;width:100%;height:100%;background:white;border-radius:1px}
-    .skip { position: absolute; z-index: 2; top: 83px; right: 24px; border: 1px solid #77798288; color: #d5d7df; background: #08090c66; padding: 9px 20px; border-radius: 25px; font-size: 15px; text-decoration: none; backdrop-filter: blur(8px); }
-    main { position: absolute; inset: 130px 24px 0; display: flex; flex-direction: column; }
+    .skip { position: absolute; z-index: 2; top: 26px; right: 24px; border: 1px solid #77798288; color: #d5d7df; background: #08090c66; padding: 9px 20px; border-radius: 25px; font-size: 15px; text-decoration: none; backdrop-filter: blur(8px); }
+    main { position: absolute; inset: 45px 24px 0; display: flex; flex-direction: column; }
     .brand { width: fit-content; margin: 0 0 20px; }
     .brand-mark { width: 94px; height: 59px; margin-left: 28px; color: var(--red); }
     .brand-name { margin-top: 4px; font-size: 35px; line-height: 1; letter-spacing: -1.6px; font-weight: 900; }
@@ -32,15 +26,15 @@
     .primary { color: #fff; background: linear-gradient(105deg, #ff3549, #f5223c); box-shadow: 0 8px 26px #f5223c25; }
     .primary svg { position: absolute; right: 24px; width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.8; }
     .secondary { color: #c7cad2; border: 1px solid #a0a2aa; background: #08090c66; font-weight: 450; }
-    @media (max-width: 500px) { body { display:block; background:#08090c; }.phone { width:100%; height:100dvh; min-height:640px; border:0; border-radius:0; box-shadow:none; }.phone:before { content:""; position:absolute; inset:0; z-index:4; border:0; pointer-events:none; } main { inset: 130px 24px 0; } }
-    @media (max-height: 760px) { main { top: 110px; } .features { gap: 9px; }.feature,.icon{min-height:50px;height:50px}.icon{width:50px;flex-basis:50px}.brand{margin-bottom:12px}h1{margin-bottom:16px}.bottom{padding-bottom:18px}.dots{margin-bottom:14px}.button{height:56px} }
+    @media (max-width: 500px) { body { display:block; background:#08090c; }.phone { width:100%; height:100dvh; min-height:640px; border:0; border-radius:0; box-shadow:none; }.phone:before { content:""; position:absolute; inset:0; z-index:4; border:0; pointer-events:none; } main { inset: 44px 24px 0; } }
+    @media (max-height: 760px) { main { top: 34px; } .features { gap: 9px; }.feature,.icon{min-height:50px;height:50px}.icon{width:50px;flex-basis:50px}.brand{margin-bottom:12px}h1{margin-bottom:16px}.bottom{padding-bottom:18px}.dots{margin-bottom:14px}.button{height:56px} }
 
 .app-page { --accent: var(--red); background: radial-gradient(ellipse at 55% 12%, #291114 0, #101114 48%, #08090b 82%); }
     .app-page.profile-pink { --accent: #f020b4; }
     .app-page .primary { color: white; background: linear-gradient(105deg, color-mix(in srgb, var(--accent), white 5%), color-mix(in srgb, var(--accent), #e90023 12%)); }
     .app-phone { background: #090a0d; }
     .app-backdrop { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 80% 16%, #40131766 0, transparent 40%); pointer-events: none; }
-    .app-main { position: absolute; inset: 65px 18px 8px; display: flex; flex-direction: column; gap: 13px; overflow-y: auto; scrollbar-width: none; }
+    .app-main { position: absolute; inset: 24px 18px 8px; display: flex; flex-direction: column; gap: 13px; overflow-y: auto; scrollbar-width: none; }
     .app-main::-webkit-scrollbar { display: none; }
     .app-topbar,.workouts-topbar { min-height: 39px; display: flex; align-items: center; justify-content: space-between; }
     .mini-brand { display: inline-flex; gap: 8px; align-items: center; color: #f4f4f6; text-decoration: none; font-size: 14px; font-weight: 850; letter-spacing: -.4px; }
@@ -52,5 +46,22 @@
     .nav-link { display: grid; align-content: center; justify-items: center; gap: 3px; color: #8f949e; text-decoration: none; font-size: 9px; }
     .nav-link span { font-size: 18px; line-height: 1; }
     .nav-link.active { color: var(--accent); }
-@media (max-width: 500px) { .app-main { inset: 62px 16px 5px; }.stats-grid { gap: 6px; }.stat-card { padding-left: 8px; }.workouts-main { inset: 62px 14px 5px; }.exercise-row { grid-template-columns: 21px 43px minmax(0,1fr) 26px; gap: 6px; }.exercise-thumb { width: 43px; } }
+@media (max-width: 500px) { .app-main { inset: 20px 16px 5px; }.stats-grid { gap: 6px; }.stat-card { padding-left: 8px; }.workouts-main { inset: 20px 14px 5px; }.exercise-row { grid-template-columns: 21px 43px minmax(0,1fr) 26px; gap: 6px; }.exercise-thumb { width: 43px; } }
     @media (max-height: 760px) { .app-main { gap: 9px; }.goal-card { min-height: 48px; }.stat-card { min-height: 58px; }.week-card { padding-top: 9px; padding-bottom: 8px; }.today-card { flex-basis: 160px; min-height: 160px; }.workouts-main { gap: 8px; }.day-button { min-height: 44px; }.exercise-list { gap: 5px; }.exercise-row { min-height: 52px; }.exercise-thumb { height: 37px; }.workouts-main .exercise-copy strong { font-size: 10px; } }
+
+/* Tema claro escolhido no menu do perfil e persistido por usuário. */
+.app-page.light-appearance { color-scheme: light; color: #1b1d22; background: radial-gradient(ellipse at 55% 12%, #f7e8ea 0, #e8e9ed 50%, #d8dbe1 100%); }
+.app-page.light-appearance .app-phone { color: #1b1d22; background: #f2f3f6; }
+.app-page.light-appearance .app-backdrop { background: radial-gradient(ellipse at 80% 16%, #f0c9ce 0, transparent 45%); }
+.app-page.light-appearance .goal-card,.app-page.light-appearance .stat-card,.app-page.light-appearance .week-card,.app-page.light-appearance .today-card,.app-page.light-appearance .load-evolution-card,.app-page.light-appearance .training-calendar-card,.app-page.light-appearance .report-stats article,.app-page.light-appearance .report-chart-card,.app-page.light-appearance .history-card,.app-page.light-appearance .exercise-row,.app-page.light-appearance .rest-card { color: #202228; border-color: #d5d7de; background-color: #fff; }
+.app-page.light-appearance .goal-card strong,.app-page.light-appearance .stat-card strong,.app-page.light-appearance .report-stats strong { color: #17191e; }
+.app-page.light-appearance .welcome-block h1,.app-page.light-appearance .workouts-topbar h1,.app-page.light-appearance .workout-heading h2,.app-page.light-appearance .exercise-copy strong,.app-page.light-appearance .today-caption strong,.app-page.light-appearance .section-heading h2,.app-page.light-appearance .history-heading h2 { color: #17191e; }
+.app-page.light-appearance .eyebrow,.app-page.light-appearance .workout-heading p,.app-page.light-appearance .exercise-copy small,.app-page.light-appearance .stat-card small,.app-page.light-appearance .section-heading p,.app-page.light-appearance .calendar-weekdays { color: #626873; }
+.app-page.light-appearance .day-button { color: #4d525c; border-color: #d5d7de; background: #fff; }
+.app-page.light-appearance .day-button.active { color: #17191e; background: color-mix(in srgb, var(--accent), white 87%); }
+.app-page.light-appearance .exercise-load { color: #202228; }
+.app-page.light-appearance .load-entry { border-color: #d5d7de; background: #f5f6f8; }
+.app-page.light-appearance .profile-menu,.app-page.light-appearance .exercise-dialog,.app-page.light-appearance .profile-dialog,.app-page.light-appearance .measures-dialog,.app-page.light-appearance .training-dialog { color: #202228; border-color: #d5d7de; background: #fff; }
+.app-page.light-appearance .profile-menu button { color: #30343b; }
+.app-page.light-appearance .app-nav { border-color: #d5d7de; background: #fffffff0; }
+.app-page.light-appearance .exercise-dialog-content > p:not(.eyebrow):not(.exercise-dialog-summary),.app-page.light-appearance .exercise-dialog-summary { color: #444a54; }
