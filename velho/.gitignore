@@ -1,5 +1,0 @@
-__pycache__/
-*.py[cod]
-backend/banco_de_dados/*.db
-backend/banco_de_dados/*.db-*
-.venv/
